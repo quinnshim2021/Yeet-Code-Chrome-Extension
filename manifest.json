@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Yeet Code",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "iconOff.png"
+      },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.leetcode.com/problemset/*"
+        ],
+        "js": ["jquery-3.4.1.min.js", "content.js"]
+      }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    }
+  }
